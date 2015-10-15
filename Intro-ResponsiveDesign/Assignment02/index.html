@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet">
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body id="page-top" class="index">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><strong>Movie Time</strong></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" id="photoFace">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#"><strong>Inicio</strong></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#movies"><strong>Movies</strong></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#tvshow"><strong>TVShow</strong></a>
+                    </li>
+                </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="col-lg-12 col-sm-12 col-xs-12 ">
+                    <div class="col-lg-6 col-sm-6 col-xs-12 col-md-6">
+                        <h1>WELCOME TO MOVIE TIME</h1>
+                        <h2 class="text-center">Enjoy this page</h2>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-xs-12 col-md-6" id="logeado">
+                        <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                            <div id="logForm" class="registerForm form-horizontal">
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-lg-12 col-xs-12 col-md-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input type="email" id="loginE" name="email" class="form-control input-lg" placeholder="Correo Electronico" autocomplete="on">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-cog"></i></span>
+                                            <input type="password" id="password" name="password" class="form-control input-lg" placeholder="Password" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button id="session" class="btn btn-info">Sign in</button>
+                                <div class="form-group">
+                                    <div id="lnkSignUp" class="col-lg-6 col-sm-5 col-xs-4 col-md-6">
+                                        <p class="text-center formNotice"><span class="action">Sign up</span></p>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6 col-xs-8  col-md-6">
+                                        <p id="forgotten" class="text-center formNotice2"><span class="action">Forgotten Password?</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                            <form action="registro" id="regForm" method="post" class="registerForm form-horizontal" style="display: none">
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-lg-12 col-xs-12 col-md-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input type="text" class="form-control input-lg" name="email" placeholder="Correo Electrónico" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-lg-12 col-xs-12 col-md-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-cog"></i></span>
+                                            <input type="password" class="form-control input-lg" name="password" placeholder="Contraseña" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group formSubmit">
+                                    <div id="lnkSignIn" class="formNotice col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <p class="text-center"><span class="action">Sign in</span></p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a type="submit" href="#" class="btn btn-success">Sign up</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                            <form action="recuperar" id="recForm" method="post" class="registerForm form-horizontal" style="display: none">
+                                <div class="form-group">
+                                    <div class="col-lg-12 col-sm-12 col-xs-12 col-md-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                            <input type="email" name="email" class="form-control input-lg" placeholder="Email" autocomplete="off">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group formSubmit">
+                                    <div id="singIn" class="formNotice2 col-lg-6 col-md-6 col-sm-6 col-xs-12" id="login">
+                                        <p class="text-center"><span class="action">Sing in</span></p>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        <button type="submit" class="btn btn-danger">Restore password</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <h3 id="explain">Clicks on Sign up to create account or clicks on Forgotten password</h3>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="text-center">
+                    <a class="btn btn-default btn-lg btn-about" href="#movies">MORE MOVIES <i class="glyphicon glyphicon-chevron-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="movies" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">MOVIES</h2>
+                </div>
+            </div>
+            <div class="row" id="listMovies">
+            </div>
+        </div>
+    </section>
+    <section id="tvshow">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">TV SHOW</h2>
+                </div>
+            </div>
+            <div class="row" id="listtvshow">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="copyright">Copyright &copy; Carolyn Ulfe</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="fb-like" data-share="true" data-width="450" data-show-faces="true">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="effect.js"></script>
+    <script src="movie.js"></script>
+    <script type="text/javascript">
+    $('.formNotice span').click(function() {
+        $("#logForm").toggle();
+        $("#regForm").toggle();
+
+    });
+    $('.formNotice2 span').click(function() {
+        $("#logForm").toggle();
+        $("#recForm").toggle();
+    });
+    $('.formNotice3 span').click(function() {
+        $("#recForm").toggle();
+        $("#regForm").toggle();
+    });
+    $('#lnkSignIn').click(function() {
+        $("#explain").text("Clicks on Sign up to create account or clicks on Forgotten password");
+    });
+    $('#lnkSignUp').click(function() {
+        $("#explain").text("If have an account clicks Sing In");
+    });
+    $('#forgotten').click(function() {
+        $("#explain").text("If have an account clicks Sing In");
+    });
+    $('#singIn').click(function() {
+        $("#explain").text("Clicks on Sign up to create account or clicks on Forgotten password");
+    });
+    </script>
+</body>
+
+</html>

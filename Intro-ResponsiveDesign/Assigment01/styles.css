@@ -1,0 +1,18 @@
+/*Styles*/
+body{
+	background-color: #d4d4d8; /*change the background color of the body*/
+}
+
+/*Headding styles*/
+.headStyle{
+	font-size: 20px;/*change the size of the heading text*/
+	color: red; /*change the color*/
+	margin-left: 50px; /*move the heading text 50px to left*/
+	font-family: "Times New Roman",Georgia, serif;/*Change the font family of the heading text; first use Georgia,
+									if the browser does not support the first font, it tries the next font.*/
+	font-weight: normal;/*The font weight change to normal style, that means heading text isn't in bold */
+	border-bottom: 1px dashed;/*The border bottom show dashed*/
+}
+h1:hover{
+	color: blue;/*change the heading text when the cursor is over the text*/
+}
