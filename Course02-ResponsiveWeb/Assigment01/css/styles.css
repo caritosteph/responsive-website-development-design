@@ -1,0 +1,143 @@
+body {
+    background: #fdfdfd none repeat scroll 0% 0%;
+    font-family: "Quicksand", sans-serif;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.breadcrumb {
+    background-color: #FFFFFF;
+}
+
+.breadcrumb a:hover {
+    color: #F0553B!important;
+}
+
+.nav-title {
+    color: #ffffff;
+    float: left;
+    padding: 5px 15px;
+    font-size: 19px;
+    line-height: 21px;
+    height: 60px
+}
+
+.nav-title:hover,
+.nav-title:focus {
+    text-decoration: none;
+    color: #efeddf;
+}
+
+a:hover,
+a:focus {
+    color: #efeddf !important;
+}
+
+.container-title {
+    border-bottom: 1px solid #efede9;
+}
+
+.task-container {
+    overflow: hidden;
+}
+
+.task-container .task {
+    display: none;
+    overflow: auto;
+    background: #FFF;
+    display: inline-block;
+    padding: 30px;
+    border: 1px solid #CCC;
+    color: #666;
+    border-top: 9px solid #39D1B4;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
+
+.task-container .task:nth-child(even) {
+    margin-right: 0;
+}
+
+.task-container .task:hover {
+    opacity: 0.8;
+    border-top: 9px solid #F0553B;
+}
+
+.task-title {
+    line-height: 1.6em;
+    text-align: center;
+}
+
+.task-subdetail {
+    line-height: 1em;
+    font-size: 11px;
+    text-align: justify;
+}
+
+.title-detail {
+    color: #24201a;
+    font-weight: bold;
+}
+#controls {
+  display: none;
+  text-align: center;
+  clear: both;
+  margin-top: 60px;
+  padding: 20px;
+  border: 1px solid #c8c7bb;
+}
+
+#controls p {
+  display: inline-block;
+  color: #666;
+  font-style: italic;
+}
+
+#controls p:first-child { margin-right: 20px; }
+
+@media only screen and (max-width: 1384px) {
+    .task-subdetail {
+        line-height: 1em;
+        font-size: 11px;
+        text-align: justify;
+    }
+    .title-detail {
+        color: #24201a;
+        font-weight: bold;
+    }
+    .img-align{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .task-subdetail {
+        line-height: 1em;
+        font-size: 12px;
+        text-align: justify;
+    }
+    .title-detail {
+        color: #24201a;
+        font-weight: bold;
+    }
+    .img-align{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .task-subdetail {
+        line-height: 1em;
+        font-size: 12px;
+        text-align: justify;
+    }
+    .title-detail {
+        color: #24201a;
+        font-weight: bold;
+    }
+    .img-align{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
