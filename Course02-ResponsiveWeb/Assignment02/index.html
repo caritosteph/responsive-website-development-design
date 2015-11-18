@@ -1,0 +1,191 @@
+<!-- This is a first example of using a template -->
+
+<head>
+    <!-- include our libraries and css files -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/handlebars-v3.0.3.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="AnimalsData.js"></script>
+    <script src="assignment.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="assignment.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- put your HTML here -->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button aria-expanded="false" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="nav-title" href="index.html">
+                    <img src="image/icon.png" height="50" width="50" alt="Animals"> ANIMAL'S LIFE
+                </a>
+            </div>
+            <div style="height: 1px;" aria-expanded="false" class="navbar-collapse collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#" id="home-tab">Home</a></li>
+                    <li><a href="#" id="photos-tab">Photos</a></li>
+                    <li><a href="#" id="about-tab">About us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div id="bread">
+                    <ol class="breadcrumb">
+                    </ol>
+                </div>
+                <div class="row container-title">
+                    <h3 class="text-center" id="header-title">ANIMAL'S LIFE</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <br>
+        <div class="container">
+            <div id="content" role="main">
+            </div>
+        </div>
+    </section>
+    <script id="albums-template" type="text/x-handlebars-template">
+        <div class="row album-container">
+            {{#each category}}
+            <div class="col-xs-12 col-md-4 album">
+                <div class="album-thumbnail" data-id="{{@index}}">
+                    <img src="{{image}}" alt="birds" height="200px" width="200px">
+                    <div class="caption">
+                        <h4> {{name}} </h4>
+                        <p>{{animals.length}} photos</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </script>
+    <script id="slidePhoto-template" type="text/x-handlebars-template">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li class="" data-target="#myCarousel" data-slide-to="1"></li>
+                        <li class="" data-target="#myCarousel" data-slide-to="3"></li>
+                        <li class="" data-target="#myCarousel" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        {{#each animals}}
+                        <div data-id="{{@index}}" class="item {{#if @first}}active {{/if}} imageSlide">
+                            <img class="slide" src="{{image1}}" alt="animals" height="350" width="800">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>{{name}}</h1>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <br>
+                <div class="alert alert-danger" role="alert">
+                    <p class="text-center">Slide Photos : Clicks each image to see its description</p>
+                    <p class="text-center">Use the controls to change the images</p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="photoDetail-template" type="text/x-handlebars-template">
+        <div class="row">
+            <div class="col-md-6 text-center">
+                <img src="{{image2}}" alt="animals" height="330" width="440">
+            </div>
+            <div class="col-md-6">
+                <p class="description">{{description}}</p>
+            </div>
+            <div class="col-md-12">
+                <br>
+                <div class="alert alert-info" role="alert">
+                    <p class="text-center">Go back to <a href="index.html"> Home </a></p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="photoTab-template" type="text/x-handlebars-template">
+        <div class="row">
+            <br> {{#each category}}
+            <div class="col-md-4">
+                <div>
+                    <h3 class="subTitle"> {{name}} </h3>
+                </div>
+                <div id="myCarousel{{name}}" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel{{name}}" data-slide-to="0" class="active"></li>
+                        <li class="" data-target="#myCarousel{{name}}" data-slide-to="1"></li>
+                        <li class="" data-target="#myCarousel{{name}}" data-slide-to="3"></li>
+                        <li class="" data-target="#myCarousel{{name}}" data-slide-to="4"></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        {{#each animals}}
+                        <div data-id="{{@index}}" class="item {{#if @first}}active {{/if}} imageSlide">
+                            <img src="{{image1}}" alt="animals" height="200px" width="800px">
+                            <div class="container">
+                                <div class="carousel-caption">
+                                    <h1>{{name}}</h1>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <a class="left carousel-control" href="#myCarousel{{name}}" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel{{name}}" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+            <div class="col-md-12">
+                <br>
+                <div class="alert alert-warning" role="alert">
+                    <p class="text-center">See all the type of animals</p>
+                    <p class="text-center">Use the controls to change the images</p>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="about-template" type="text/x-handlebars-template">
+        <div class="row">
+            <div class="col-md-12">
+                <p>"ANIMAL'S LIFE is a web page where you can know about different kind of animals that live in the earth. Some of them are Reptils, Mammals and Birds. We have picture for each one and a description. I hope you enjoy and learn many things about those animals"</p>
+            </div>
+            <br>
+            <div class="col-md-12">
+                {{#each category}}
+                <div class="col-md-4">
+                    <img src="{{image}}" alt="animals" height="200px" width="200px">
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+</body>

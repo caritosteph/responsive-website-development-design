@@ -1,0 +1,59 @@
+/* put your css code here */
+
+.nav-title {
+    color: #fff;
+    font-size: 22px;
+}
+
+.nav-title:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.album-container {
+    overflow: hidden;
+}
+
+.album-container .album {
+    display: none;
+    overflow: auto;
+    background: #FFF;
+    display: inline-block;
+    padding: 30px;
+    border: 1px solid #CCC;
+    color: #666;
+    border-top: 9px solid #984F90;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.album-container .album:nth-child(even) {
+    margin-right: 0;
+}
+
+.album-container .album:hover {
+    opacity: 0.8;
+    border-top: 9px solid #CC94C5;
+}
+
+.carousel-caption h1 {
+    color: #F706D6;
+}
+
+.description {
+    text-align: justify;
+}
+.subTitle{
+    text-align: center;
+    color:#5A32DE;
+}
+.slide{
+    cursor: pointer;
+}
+@media screen and (max-width: 320){
+    .animal-image{
+        text-align: center;
+    }
+}
