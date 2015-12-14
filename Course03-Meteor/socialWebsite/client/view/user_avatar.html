@@ -1,0 +1,10 @@
+<template name="user_avatar">
+    {{#each users}}
+    <div class="row user">
+        <div class="col">
+            {{> avatar user=this shape="circle" }}
+        </div>
+        <div class="col user-name">{{name}}</div>
+    </div>
+    {{/each}}
+</template>

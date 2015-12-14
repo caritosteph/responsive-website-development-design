@@ -1,0 +1,28 @@
+<template name="websiteList">
+    {{#if currentUser}} {{> website_form}} {{/if}}
+    <br>
+    <div class="container">
+        <nav class="">
+            <div class="nav-wrapper nav-search">
+                <form>
+                    <div class="input-field">
+                        {{> EasySearch.Input index=websitesIndex }}
+                        <label for="search"><i class="material-icons">search</i></label>
+                    </div>
+                </form>
+            </div>
+        </nav>
+        <br> 
+        <div class="row">
+            {{#EasySearch.Each index=websitesIndex }} 
+                {{> website_item}} 
+            {{/EasySearch.Each}} 
+        </div>
+        
+
+        {{> EasySearch.LoadMore index=websitesIndex}} {{#EasySearch.IfNoResults index=websitesIndex}}
+        <div class="no-results">No results found!</div>
+        {{/EasySearch.IfNoResults}}
+        <br>
+    </div>
+</template>

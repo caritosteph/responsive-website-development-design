@@ -1,0 +1,16 @@
+<template name="home">
+    <div class="container">
+        <div class="text-center">
+            <h1>Welcome to Social Website!</h1>
+            <p>
+                This is a social website aggregator allows users to share, discuss and rank interesting webpages they have found.
+            </p>
+            {{#unless currentUser}}
+            <p>
+                You can post new websites if you are <strong><a href="/sign-in">Logged in</a></strong>.
+            </p>
+            {{/unless}}
+        </div>
+        {{> top}}
+    </div>
+</template>

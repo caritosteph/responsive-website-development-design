@@ -1,0 +1,20 @@
+<template name="nav">
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo center">Social Website</a>
+                {{#if currentUser}}
+                <a href="#" class="brand-logo right"> {{> user_avatar}}</a>
+                {{/if}}
+                <ul id="nav-mobile" class="right side-nav fixed" style="width: 240px;">
+                    <li class="{{isActiveRoute regex='home'}}"><a href="{{pathFor 'home'}}">Home</a></li>
+                    <li class="{{isActiveRoute regex='websiteList'}}"><a href="{{pathFor 'websiteList'}}">Webpages</a></li>
+                    <li>{{> atNavButton }}</li>
+                </ul>
+                <a href="#" class="button-collapse" data-activates="nav-mobile">
+                    <i class="mdi-navigation-menu"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+</template>

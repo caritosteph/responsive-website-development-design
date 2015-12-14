@@ -1,0 +1,12 @@
+<template name="detail">
+    <div class="container">
+        <h4>{{title}}</h4>
+        <p>
+           {{description}}
+        </p>
+        {{> conversation commentableId=_id}}
+        <a href="/websiteList" class="waves-effect waves-light red darken-4 btn"><i class="material-icons left">undo</i>Go back</a>
+        <br><br>
+    </div>
+</template>
+

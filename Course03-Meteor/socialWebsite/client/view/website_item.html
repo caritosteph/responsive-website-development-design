@@ -1,0 +1,60 @@
+<!-- <template name="website_item">
+    <div class="container">
+        <li>
+            <a href="/websiteList/{{_id}}">{{title}}</a>
+            <p>
+                {{description}}
+            </p>
+            <p>
+                User:
+                <a href="" class="">{{getUser createdBy}}
+                </a>
+            </p>
+            <div class="row">
+                <div class="col s1">
+                    <a href="#" onclick="{{#unless currentUser}} Materialize.toast('You must be Sing in to vote!', 4000){{/unless}}" class="thumb_up {{#if currentUser}}js-upvote{{/if}}"><i class="tiny material-icons">thumb_up</i></a> {{count_up}}
+                </div>
+                <div class="col s1">
+                    <a href="#" onclick="{{#unless currentUser}} Materialize.toast('You must be Sing in to vote!', 4000){{/unless}}" class="thumb_down {{#if currentUser}}js-downvote{{/if}}"><i class="tiny material-icons">thumb_down</i></a> {{count_down}}
+                </div>
+            </div>
+        </li>
+    </div>
+</template> -->
+<template name="website_item">
+    <!-- <div class="row"> -->
+    <div id="{{_id}}" class="col s12 m6 push-s1 ">
+        <div class="col s12 m8 pull-s1">
+            <!-- <div class="col s12 m8 pull-s1"> -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="row">
+                        {{#if currentUser}}
+                        <div class="col s2 push-s10">
+                            <a class="btn-floating red darken-1 js-remove-website"><i class="material-icons">delete</i></a>
+                        </div>
+                        {{/if}}
+                        <div class="col s12">
+                            <a href="/websiteList/{{_id}}"><span class="card-title">{{title}}</span></a>
+                        </div>
+                    </div>
+                    <p>{{description}}.</p>
+                    <p>
+                        User:
+                        <a href="" class="">{{getUser createdBy}}
+                </a>
+                    </p>
+                </div>
+                <div class="card-action text-center">
+                    <!-- <div class="col s2"> -->
+                    <a href="#" onclick="{{#unless currentUser}} Materialize.toast('You must be Sing in to vote!', 4000){{/unless}}" class="thumb_up {{#if currentUser}}js-upvote{{/if}}"><i class="tiny material-icons">thumb_up</i></a> {{count_up}}
+                    <!-- </div> -->
+                    <!-- <div class="col s2"> -->
+                    <a href="#" onclick="{{#unless currentUser}} Materialize.toast('You must be Sing in to vote!', 4000){{/unless}}" class="thumb_down {{#if currentUser}}js-downvote{{/if}}"><i class="tiny material-icons">thumb_down</i></a> {{count_down}}
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+</template>

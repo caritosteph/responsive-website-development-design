@@ -1,0 +1,119 @@
+/* CSS declarations go here */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif/*rtl:prepend:"Droid Arabic Kufi","Droid Sans", */
+    ;
+    background: #fcfcfc url(/bg.jpg) repeat;
+    margin: 0px;
+    /* Margin bottom by footer height */
+    margin-bottom: 70px;
+    padding: 0px;
+    color: #555555;
+    min-width: 320px;
+}
+
+@media only screen and (min-width: 993px) {
+    #content {
+        margin-left: 240px;
+    }
+}
+
+footer > .content {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+header,
+main,
+footer {
+    padding-left: 240px;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+.container {
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 100%;
+}
+
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 99%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 98%;
+    }
+}
+
+.hidden_div {
+    display: none;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 70px;
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 100%!important;
+    }
+}
+
+a.thumb_up {
+    color: #64dd17;
+}
+
+a.thumb_down {
+    color: #dd2c00;
+}
+
+a.thumb_up:hover {
+    color: #76ff03;
+}
+
+a.thumb_down:hover {
+    color: #ff3d00;
+}
+
+.user {
+    padding-top: 8px;
+}
+
+.user-name {
+    font-size: 14pt;
+}
+
+nav {
+    /*color: #130000!important;*/
+    background-color: #7D54B1!important;
+}
+
+nav .input-field label i {
+    color: rgb(0, 0, 0)!important;
+}
+nav .nav-search{
+  background-color: #ffffff;
+  color: #000000;
+}
+footer.page-footer {
+    background-color: #8043A5!important;
+}
